@@ -1,0 +1,11 @@
+app:
+  name: Documentation
+  flow-enrichment:
+    data-category-field: data_category
+  api:
+    confirmations:
+      path: /api/v1/confirmations
+      data-category: TRADE_CONFIRMATION
+      called-by-application: Booking
+  callers:
+    - Booking
