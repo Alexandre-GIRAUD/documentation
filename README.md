@@ -1,5 +1,7 @@
 # Documentation (fixture)
 
+Business function: `BACK_OFFICE` (`app.business_function`).
+
 Trade documentation. Stores the confirmation generated when a trade is booked.
 
 ## Integrations (topology)
