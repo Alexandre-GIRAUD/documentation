@@ -1,6 +1,7 @@
 # Documentation (fixture)
 
 Business function: `BACK_OFFICE` (`app.business_function`).
+Pillar: `Trade Processing` (`app.pillar`).
 
 Trade documentation. Stores the confirmation generated when a trade is booked.
 
