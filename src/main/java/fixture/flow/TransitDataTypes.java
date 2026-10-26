@@ -1,6 +1,9 @@
 package fixture.flow;
 
-/** Data categories ingested by Documentation. */
+/**
+ * Edge attributes on Documentation flows.
+ * grep: data frequency trade cashflow real-time
+ */
 public final class TransitDataTypes {
 
   /** Node attribute business_function for Documentation. */
@@ -9,9 +12,9 @@ public final class TransitDataTypes {
   /** Node attribute pillar for Documentation. */
   public static final String PILLAR = "Trade Processing";
 
-  public static final String API_TRADE_CONFIRMATION = "TRADE_CONFIRMATION";
-
-  public static final String PAYLOAD_FORMAT = "JSON";
+  public static final String DATA_TRADE = "trade";
+  public static final String DATA_CASHFLOW = "cashflow";
+  public static final String FREQUENCY_REAL_TIME = "real-time";
 
   private TransitDataTypes() {}
 }

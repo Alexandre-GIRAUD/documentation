@@ -3,11 +3,21 @@ app:
   business_function: BACK_OFFICE
   pillar: "Trade Processing"
   flow-enrichment:
-    data-category-field: data_category
+    data-field: data
+    frequency-field: frequency
   api:
     confirmations:
       path: /api/v1/confirmations
-      data-category: TRADE_CONFIRMATION
       called-by-application: Booking
+      connection-kind: API
+      data: trade
+      frequency: real-time
+    cashflows:
+      path: /api/v1/cashflows
+      called-by-application: Settlement
+      connection-kind: API
+      data: cashflow
+      frequency: real-time
   callers:
     - Booking
+    - Settlement

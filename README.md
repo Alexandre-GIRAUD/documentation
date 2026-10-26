@@ -3,16 +3,18 @@
 Business function: `BACK_OFFICE` (`app.business_function`).
 Pillar: `Trade Processing` (`app.pillar`).
 
-Trade documentation. Stores the confirmation generated when a trade is booked.
+Trade documentation.
 
 ## Integrations (topology)
 
 - Exposes `/api/v1/confirmations` called by **Booking**.
+- Exposes `/api/v1/cashflows` called by **Settlement**.
 
 ## Data transiting on flows (Data Model fixture)
 
-| Source | Kind | data_category |
-|--------|------|---------------|
-| Booking | API (inbound) | `TRADE_CONFIRMATION` |
+| Source | Kind | Channel | data | frequency |
+|--------|------|---------|------|-----------|
+| Booking | API (inbound) | /api/v1/confirmations | `trade` | `real-time` |
+| Settlement | API (inbound) | /api/v1/cashflows | `cashflow` | `real-time` |
 
-See `TransitDataTypes.java` and `application.yml`.
+See `TransitDataTypes.java` and `application.yml` (`data`, `frequency`).
